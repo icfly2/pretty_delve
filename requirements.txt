@@ -1,0 +1,4 @@
+django
+bokeh
+django-tables2
+django-filter
