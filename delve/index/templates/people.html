@@ -2,23 +2,34 @@
 {% load render_table from django_tables2 %}
 <!doctype html>
 <html>
-    <head>
-        <title>List of persons</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    </head>
-    <body>
-            <table id="myTable" class="tablesorter"> 
-        {% render_table table %}
-    </table> 
-        <script type="text/javascript" src="/path/to/jquery-latest.js"></script> 
-        <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script> 
-        <script>
-            $(document).ready(function() 
-                { 
-                    $("#myTable").tablesorter(); 
-                } 
-            ); 
-                
-        </script>
-    </body>
+
+<head>
+    <title>List of persons</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class='jumbotron'>
+            <h1> Usefull delve</h1>
+        </div>
+
+
+        <div class="col-md-12">
+            <table id="myTable" class="tablesorter">
+                {% render_table table %}
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="/path/to/jquery-latest.js"></script>
+    <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myTable").tablesorter();
+        }
+        );
+
+    </script>
+</body>
+
 </html>
